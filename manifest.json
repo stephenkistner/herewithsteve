@@ -1,11 +1,11 @@
 {
-  "name": "genesis",
-  "short_name": "genesis",
-  "description": "A very cute app",
+  "name": "Steve Designs for Participation",
+  "short_name": "steve",
+  "description": "Stephen Kistner is a designer & developer building digital experiences, spaces and infrastructures for participation. Click on over and smash that Steve button!",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffc0cb",
-  "theme_color": "#ffc0cb",
+  "background_color": "#2b2b2b",
+  "theme_color": "#2b2b2b",
   "icons": [{
     "src": "/assets/icon.png",
     "type": "image/png",

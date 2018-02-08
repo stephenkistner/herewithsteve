@@ -1,19 +1,11 @@
-var html = require('choo/html')
+const html = require('choo/html')
+const raw = require('choo/html/raw')
 
-var TITLE = '🚂🚋🚋 - route not found'
-
-module.exports = view
-
-function view (state, emit) {
-  if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
+module.exports = function (state) {
+  var query = state.currentPageData.text
   return html`
-    <body class="sans-serif">
-      <h1 class="f-headline pa3 pa4-ns">
-        404 - route not found
-      </h1>
-      <a href="/" class="link black underline">
-        Back to main
-      </a>
-    </body>
+    <div class="view--default">
+      <p class="type1 sidemargins"><b>Steve</b> doesn’t have anything to say about <b>“${query}.”</b></p>
+    </div>
   `
 }

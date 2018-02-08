@@ -10,10 +10,22 @@
     "test": "standard && npm run test-deps",
     "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons"
   },
+  "documentify": {
+    "transform": [
+      "./addMetaContent"
+    ]
+  },
   "dependencies": {
+    "are.na": "^0.1.0",
+    "baffle": "^0.3.6",
     "choo": "^6.7.0",
     "choo-devtools": "^2.3.3",
     "choo-service-worker": "^2.3.1",
+    "firebase": "^4.9.1",
+    "hyperstream": "^1.2.2",
+    "nanoanimation": "^2.1.0",
+    "on-load": "^3.3.4",
+    "ress": "^1.2.2",
     "sheetify": "^7.1.0",
     "tachyons": "^4.9.1"
   },
