@@ -58,6 +58,24 @@ body {
   color: #FFA5ED;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    background-color: white;
+    border-left: 1px solid $2b2b2b;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2b2b2b;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 #load-overlay {
   will-change: transform;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+20 */

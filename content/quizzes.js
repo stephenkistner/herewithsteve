@@ -54,7 +54,8 @@ var data = {
       fieri:{text: 'Awwww yeah let’s take a trip to <i>Flavortown</i> baby!', timing: 1900},
       mcmillan:{text: 'Bob Ross’s fro is too damn high!', timing: 1900}
     },
-    database: 'bestHair'
+    database: 'bestHair',
+    resultsShowImage: true
   },
   "q-snack": {
     title: "Choose your favorite snack food",
@@ -68,7 +69,8 @@ var data = {
       cosmic:{text: 'Do we get to go outside for recess today? ⛹️', timing: 1700},
       avocado:{text: 'Behold! A millennial over yonder! 🥑', timing: 1600}
     },
-    database: 'favSnack'
+    database: 'favSnack',
+    resultsShowImage: true
   },
   "q-here": {
     title: "Why are you here stranger?",
@@ -102,7 +104,8 @@ var data = {
       lacroix:{text: 'Sometimes, but it’s not his favorite...'},
       arizona:{text: 'More than he probably should... But it’s sooooo good 😅', timing: 1900}
     },
-    database: 'steveDrinks'
+    database: 'steveDrinks',
+    resultsShowImage: true
   },
 }
 

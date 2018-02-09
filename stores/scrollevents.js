@@ -38,7 +38,7 @@ function store (state, emitter) {
 
     function aboutFadeVisibility(pos) {
       var oldOpacity = state.aboutFadeOpacity
-      if (state.params.path == 'about') {
+      if (state.params.path == 'about' || state.params.path == 'results') {
         state.aboutFadeOpacity = map_range(pos,0,200,1,0);
         if (state.aboutFadeOpacity !== oldOpacity) {
           emitter.emit(state.events.RENDER)

@@ -14,6 +14,8 @@ var Quiz = require('./Quiz.js')
 var Work = require('./Work.js')
 var Museum = require('./Museum.js');
 
+var Results = require('./Results.js');
+
 var onload = require('on-load')
 
 module.exports = view
@@ -61,6 +63,9 @@ function view (state, emit) {
         break;
       case 'Quiz':
         return Quiz(state,emit);
+        break;
+      case 'Results':
+        return Results(state,emit);
         break;
       default:
         return Unknown(state,emit);

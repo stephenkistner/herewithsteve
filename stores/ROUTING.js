@@ -26,6 +26,9 @@ function store (state, emitter) {
     museum: {
       template: 'Museum'
     },
+    results: {
+      template: 'Results'
+    }
   }
 
   //pages accessible via /:path but not included in the Steve! button flow
@@ -52,7 +55,7 @@ function store (state, emitter) {
     },
     end: {
       text: "🎉👏🎉👏🎉",
-      subtext: 'Damn. You clicked through everything <b>Steve’s</b> got for you right now. Keep smashing that <b>Steve</b> button to see what you missed or <a href="mailto:chat@with.sk?subject=Hey Steve!">chat@with.sk</a> if you wanna to talk more.',
+      subtext: 'Damn. You clicked through everything <b>Steve’s</b> got for you right now. Keep smashing that <b>Steve</b> button to see what you missed or <a href="mailto:chat@with.sk?subject=Hey Steve!">chat@with.sk</a> if you wanna to talk more. <br><br><small>psssst <a href="/results">click here</a> to see the results of all the quizzes and total <b>Steve!</b> smashes!</small>',
       align: 'center',
       template: 'Default'
     }
@@ -61,7 +64,7 @@ function store (state, emitter) {
   //OBJECT containing just the pages used in the Steve! button flow
   var pageBlocksVisible = Object.assign({}, defaultPages, contentDefaults, contentMoods, contentQuizzes)
 
-  console.log(pageBlocksVisible)
+  //console.log(pageBlocksVisible)
 
   //OBJECT containing ALL EXISTING PAGES via /:path, including hidden ones
   var pageBlocks = Object.assign({}, pageBlocksVisible, contentProjects, hiddenPages)
@@ -70,7 +73,7 @@ function store (state, emitter) {
   // shuffled by default for new experience every time
   var flowList = shuffleArray(Object.keys(pageBlocksVisible))
                                 //update this to call a shuffle function && then call it in /navlink when all pages seen
-        console.log(flowList)
+        //console.log(flowList)
   var projectList = Object.keys(contentProjects)
 
   var projSelector = -1
@@ -89,7 +92,7 @@ function store (state, emitter) {
     for (var i = 0; i < mutation.addedNodes.length; i++) {
       // do things to your newly added nodes here
       var node = mutation.addedNodes[i]
-      console.log(node)
+      //console.log(node)
     }
   })
 })
@@ -194,7 +197,7 @@ var homeEntry = false
 
     // called every time someone navigates to a new page
     emitter.on(state.events.NAVIGATE, function() {
-      console.log("PUSHED:", state.pushed, "ANSWERED", state.currentPageData.quizAnswered, "ROLLED", state.currentPageData.stopItRick)
+      //console.log("PUSHED:", state.pushed, "ANSWERED", state.currentPageData.quizAnswered, "ROLLED", state.currentPageData.stopItRick)
       state.transitioning = true;
       transitionOut()
     })//end NAVIGATE
@@ -202,7 +205,7 @@ var homeEntry = false
     emitter.on(state.events.POPSTATE, function(){
       state.statePopped = true
 
-      console.log("POP PUSHED:", state.pushed, "POP ANSWERED", state.currentPageData.quizAnswered, "POP ROLLED",state.currentPageData.stopItRick)
+      //console.log("POP PUSHED:", state.pushed, "POP ANSWERED", state.currentPageData.quizAnswered, "POP ROLLED",state.currentPageData.stopItRick)
     })
 
 

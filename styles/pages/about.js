@@ -1,7 +1,7 @@
 var vars = require('../vars.js')
 
 module.exports = `
-  .view--about {
+  .view--about, .view--results {
     padding-top: 100px;
     padding-bottom: ${vars.blockspacing.d};
   }
