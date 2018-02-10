@@ -19,7 +19,9 @@ function store (state, emitter) {
     arena.channel(data).get()
       .then(channel => {
 
-          state.currentPageData.arenaPayload.blocks = channel.contents.filter(function(item, idx){
+          console.log(channel.contents)
+
+          state.currentPageData.arenaPayload.blocks = channel.contents.reverse().filter(function(item, idx){
             return item.class == 'Image' && item.image && idx < 12;
           });
 
